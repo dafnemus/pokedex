@@ -3,7 +3,7 @@ import './App.css';
 import logoPoke from '../assets/pokeball-logo.svg'
 import Filter from './filter/index';
 import SearchBar from './searchBar/index'
-import MiniCardPoke from './miniCardPoke';
+import ContainMainCards from './containMinCards';
 
 function App() {
   return <div>
@@ -15,7 +15,7 @@ function App() {
       <Filter />
     </div>
     <SearchBar />
-    <MiniCardPoke />
+    <ContainMainCards />
   </div>;
 }
 
