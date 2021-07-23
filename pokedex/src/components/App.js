@@ -1,8 +1,18 @@
 import React from 'react';
 import './App.css';
+import logoPoke from '../assets/pokeball-logo.svg'
+import Filter from './filter';
 
 function App() {
-  return <h1>Hola</h1>;
+  return <div>
+    <div>
+      <div>
+      <img src={logoPoke} alt='Logo Pokemon' />
+      <h1>Pokédex</h1>
+      </div>
+      <Filter />
+    </div>
+  </div>;
 }
 
 export default App;
