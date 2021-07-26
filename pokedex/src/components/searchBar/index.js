@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import iconSearch from '../../assets/icon-search.svg';
+import styles from './styles.module.scss'
 
 function SearchBar() {
   const [form, setForm] = useState({
@@ -15,9 +16,10 @@ function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <img src={iconSearch} alt='lupa buscadora' />
+    <form className={styles.containForm} onSubmit={handleSubmit}>
+      <img className={styles.logoSearch} src={iconSearch} alt='lupa buscadora' />
       <input
+        className={styles.search}
         name='namePokemon'
         onChange={handleChange}
         placeholder='Procurar'
