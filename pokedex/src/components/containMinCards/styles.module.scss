@@ -1,3 +1,5 @@
+@import '../../static/colors/colors.module.scss';
+
 .containCards {
   display: flex;
   flex-wrap: wrap;
@@ -8,9 +10,10 @@
 .card {
   width: 105px;
   height: 110px;
-  border: 2px solid black;
+  border: 1px solid black;
   text-align: center;
   border-radius: 8px;
+  background-color: $white;
 }
 
 .order {
@@ -18,13 +21,16 @@
   padding: 0;
   text-align: end;
   font-size: 0.5rem;
+  background-color: $white;
 }
 
 .imagePokemon {
-  top: calc(50% - 64px);
+  top: calc(50% - 59px);
   margin: 0 auto;
   position: relative;
   padding: 0;
+  width: 80px;
+  background-color: $white;
 }
 
 .namePokemon {
@@ -34,4 +40,5 @@
   position: relative;
   top: calc(50% - 79px);
   font-size: 0.625rem;
+  background-color: $white;
 }
