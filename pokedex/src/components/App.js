@@ -12,7 +12,7 @@ function App() {
       <div className={styles.containHeader}>
         <div className={styles.containLogo}>
           <img src={logoPoke} alt='Logo Pokemon' />
-          <h1>Pokédex</h1>
+          <h1 className={styles.title}>Pokédex</h1>
         </div>
         <Filter />
       </div>

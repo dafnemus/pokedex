@@ -21,7 +21,6 @@ function ContainMainCards() {
     setInfoPoke({ data: res.data.results });
   };
 
-
   return (
     <div className={styles.containCards}>
       {pokemon.info.map((poke) => {

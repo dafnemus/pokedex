@@ -1,9 +1,13 @@
 @import '../static/colors/colors.module.scss';
 @import '../static/font/font.module.scss';
+* {
+  margin: 0;
+  padding: 0;
+  background-color: $background-cain-color;
+  font-family: $font-poppins;
+}
 
 .mainContain {
-  font-family: $font-poppins;
-  background-color: $background-cain-color;
   color: $dark-gray;
 }
 .containLogo {
@@ -15,5 +19,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 24px;
+  margin: 30px 24px 5px;
+}
+
+.title {
+  font-size: 1.5rem;
 }
