@@ -1,27 +1,38 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import MiniCardPoke from '../miniCardPoke';
 
 function ContainMainCards() {
-  const [infoPoke, setInfoPoke] = useState([]);
+  const [infoPoke, setInfoPoke] = useState({ data: [] });
+  const [pokemon, setPokemon] = useState({ info: [] });
 
+  const getPokemon = async (pokemon) => {
+    const res = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    setPokemon((last) => ({ ...last, info: [...last.info, res.data] }));
+  };
   useEffect(() => {
     listPokemons();
+    infoPoke.data.forEach((idPokemon) => {
+      getPokemon(idPokemon.name);
+    });
   }, []);
 
   const listPokemons = async () => {
-    const res = await axios('https://pokeapi.co/api/v2/pokemon/');
-    setInfoPoke(res.data.results);
-    console.log(res.data.results);
-    console.log(infoPoke);
+    const res = await axios('https://pokeapi.co/api/v2/pokemon');
+    setInfoPoke({ data: res.data.results });
   };
 
   return (
     <div>
-      {infoPoke.map((poke) => {
+      {pokemon.info.map((poke) => {
         return (
-          <div key={poke.id}>
-            <MiniCardPoke id={poke.id} name={poke.name} />;
+          <div key={poke.order}>
+            <h3 key={poke.order}>{poke.order}</h3>
+            <img
+              key={poke.sprites.front_default}
+              src={poke.sprites.front_default}
+              alt='pokemon'
+            />
+            <h2 key={poke.name}>{poke.name}</h2>
           </div>
         );
       })}

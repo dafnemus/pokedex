@@ -1,22 +1,24 @@
 import React from 'react';
 import './App.css';
-import logoPoke from '../assets/pokeball-logo.svg'
+import logoPoke from '../assets/pokeball-logo.svg';
 import Filter from './filter/index';
-import SearchBar from './searchBar/index'
+import SearchBar from './searchBar/index';
 import ContainMainCards from './containMinCards';
 
 function App() {
-  return <div>
+  return (
     <div>
       <div>
-      <img src={logoPoke} alt='Logo Pokemon' />
-      <h1>Pokédex</h1>
+        <div>
+          <img src={logoPoke} alt='Logo Pokemon' />
+          <h1>Pokédex</h1>
+        </div>
+        <Filter />
       </div>
-      <Filter />
+      <SearchBar />
+      <ContainMainCards />
     </div>
-    <SearchBar />
-    <ContainMainCards />
-  </div>;
+  );
 }
 
 export default App;
