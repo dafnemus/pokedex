@@ -1,12 +1,35 @@
 .containCards {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  gap: 10px;
+  margin: 30px 10px;
+  gap: 5px;
 }
 
 .card {
   width: 105px;
   height: 110px;
   border: 2px solid black;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.order {
+  margin: 0 5px;
+  padding: 0;
+  text-align: end;
+}
+
+.imagePokemon {
+  top: calc(50% - 79px);
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+}
+
+.namePokemon {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  position: relative;
+  top: calc(50% - 89px);
 }

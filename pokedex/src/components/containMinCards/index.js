@@ -21,18 +21,24 @@ function ContainMainCards() {
     setInfoPoke({ data: res.data.results });
   };
 
+  
   return (
-    <div  className={styles.containCards}>
+    <div className={styles.containCards}>
       {pokemon.info.map((poke) => {
         return (
           <div key={poke.order} className={styles.card}>
-            <h3 key={poke.order}>{poke.order}</h3>
+            <h3 className={styles.order} key={poke.order}>
+              {poke.order}
+            </h3>
             <img
+              className={styles.imagePokemon}
               key={poke.sprites.front_default}
               src={poke.sprites.front_default}
               alt='pokemon'
             />
-            <h2 key={poke.name}>{poke.name}</h2>
+            <h2 className={styles.namePokemon} key={poke.name}>
+              {poke.name}
+            </h2>
           </div>
         );
       })}
