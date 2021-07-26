@@ -1,0 +1,12 @@
+.containCards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.card {
+  width: 105px;
+  height: 110px;
+  border: 2px solid black;
+}

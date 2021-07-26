@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import styles from './styles.module.scss';
 
 function ContainMainCards() {
   const [infoPoke, setInfoPoke] = useState({ data: [] });
@@ -9,11 +10,10 @@ function ContainMainCards() {
     const res = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     setPokemon((last) => ({ ...last, info: [...last.info, res.data] }));
   };
+
   useEffect(() => {
     listPokemons();
-    infoPoke.data.forEach((idPokemon) => {
-      getPokemon(idPokemon.name);
-    });
+    infoPoke.data.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
   const listPokemons = async () => {
@@ -22,10 +22,10 @@ function ContainMainCards() {
   };
 
   return (
-    <div>
+    <div  className={styles.containCards}>
       {pokemon.info.map((poke) => {
         return (
-          <div key={poke.order}>
+          <div key={poke.order} className={styles.card}>
             <h3 key={poke.order}>{poke.order}</h3>
             <img
               key={poke.sprites.front_default}
