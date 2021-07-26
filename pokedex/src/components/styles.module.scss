@@ -1,0 +1,19 @@
+@import '../static/colors/colors.module.scss';
+@import '../static/font/font.module.scss';
+
+.mainContain {
+  font-family: $font-poppins;
+  background-color: $background-cain-color;
+  color: $dark-gray;
+}
+.containLogo {
+  display: flex;
+  gap: 10px;
+}
+
+.containHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 24px;
+}
