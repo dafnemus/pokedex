@@ -80,7 +80,7 @@ BigCardPokemon.propTypes = {
   spd: PropTypes.number,
 };
 
-BigCardPokemon.propDefault = {
+BigCardPokemon.defaultProps = {
   onClick: null,
   name: '',
   order: 0,

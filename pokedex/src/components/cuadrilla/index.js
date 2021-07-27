@@ -23,7 +23,7 @@ Pokemon.propTypes = {
   onClick: PropTypes.func,
 };
 
-Pokemon.propDefault = {
+Pokemon.defaultProps = {
   order: 0,
   src: '',
   name: '',

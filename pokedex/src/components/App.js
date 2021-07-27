@@ -9,7 +9,6 @@ import BigCardPokemon from './bigCard';
 
 function App() {
   const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
-  // const [bigCardPoke, setBigCardPoke] = useState(false);
 
   const getPokemon = async (pokemon) => {
     const res = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -22,11 +21,11 @@ function App() {
   }, []);
 
   const openModal = () => {
-    setPokemon({ isOpen: true });
+    setPokemon({ ...pokemon, isOpen: true });
   };
 
   const closeModal = () => {
-    setPokemon({ isOpen: false });
+    setPokemon({ ...pokemon, isOpen: false });
   };
   return (
     <div className={styles.mainContain}>

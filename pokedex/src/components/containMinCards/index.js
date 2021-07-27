@@ -26,7 +26,7 @@ ContainMainCards.propTypes = {
   pokemons: PropTypes.array,
 };
 
-ContainMainCards.propDefault = {
+ContainMainCards.defaultProps = {
   onClick: null,
   pokemons: [],
 };
