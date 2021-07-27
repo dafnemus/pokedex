@@ -6,7 +6,7 @@ import Pokemon from '../cuadrilla/index';
 function ContainMainCards({ onClick, pokemons }) {
   return (
     <div className={styles.containCards}>
-      {pokemons.info.map((poke) => {
+      {pokemons.map((poke) => {
         return (
           <Pokemon
             key={poke.order}

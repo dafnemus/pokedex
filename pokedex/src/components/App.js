@@ -1,13 +1,14 @@
-import React,  { useEffect, useState }  from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import logoPoke from '../assets/pokeball-logo.svg';
 import Filter from './filter/index';
 import SearchBar from './searchBar/index';
 import ContainMainCards from './containMinCards';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
+import BigCardPokemon from './bigCard';
 
 function App() {
-  const [pokemon, setPokemon] = useState({ info: [] });
+  const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
   // const [bigCardPoke, setBigCardPoke] = useState(false);
 
   const getPokemon = async (pokemon) => {
@@ -19,6 +20,14 @@ function App() {
     const res = await axios('https://pokeapi.co/api/v2/pokemon');
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
+
+  const openModal = () => {
+    setPokemon({ isOpen: true });
+  };
+
+  const closeModal = () => {
+    setPokemon({ isOpen: false });
+  };
   return (
     <div className={styles.mainContain}>
       <div className={styles.containHeader}>
@@ -29,7 +38,12 @@ function App() {
         <Filter />
       </div>
       <SearchBar />
-      <ContainMainCards pokemons={pokemon} />
+
+      {pokemon.isOpen ? (
+        <BigCardPokemon onClick={closeModal} />
+      ) : (
+        <ContainMainCards onClick={openModal} pokemons={pokemon.info} />
+      )}
     </div>
   );
 }
