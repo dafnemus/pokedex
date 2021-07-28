@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 function Pokemon({ order, src, name, onClick, type }) {
-  console.log(type[0].type.name)
   return (
     <div type={type} onClick={onClick} className={styles[type[0].type.name]}>
       <p className={styles.order}>#{order}</p>
