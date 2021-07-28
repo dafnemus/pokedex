@@ -9,6 +9,7 @@ function ContainMainCards({ onClick, pokemons }) {
       {pokemons.map((poke) => {
         return (
           <Pokemon
+            type={poke.types}
             key={poke.order}
             order={poke.order}
             name={poke.name}

@@ -16,7 +16,7 @@ function App() {
   };
 
   useEffect(async () => {
-    const res = await axios('https://pokeapi.co/api/v2/pokemon');
+    const res = await axios('https://pokeapi.co/api/v2/pokemon?limit=150');
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
@@ -37,7 +37,6 @@ function App() {
         <Filter />
       </div>
       <SearchBar />
-
       {pokemon.isOpen ? (
         <BigCardPokemon onClick={closeModal} />
       ) : (

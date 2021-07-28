@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-function Pokemon({ order, src, name, onClick }) {
+function Pokemon({ order, src, name, onClick, type }) {
+  console.log(type[0].type.name)
   return (
-    <div onClick={onClick} className={styles.card}>
+    <div type={type} onClick={onClick} className={styles[type[0].type.name]}>
       <p className={styles.order}>#{order}</p>
-      <img
-        className={styles.imagePokemon}
-        src={src}
-        alt='pokemon'
-      />
+      <img className={styles.imagePokemon} src={src} alt='pokemon' />
       <h2 className={styles.namePokemon}>{name}</h2>
     </div>
   );
@@ -21,6 +18,7 @@ Pokemon.propTypes = {
   src: PropTypes.src,
   name: PropTypes.string,
   onClick: PropTypes.func,
+  type: PropTypes.array,
 };
 
 Pokemon.defaultProps = {
@@ -28,6 +26,7 @@ Pokemon.defaultProps = {
   src: '',
   name: '',
   onClick: null,
+  type: [],
 };
 
 export default Pokemon;

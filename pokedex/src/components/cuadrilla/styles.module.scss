@@ -1,38 +1,335 @@
 @import '../../static/colors/colors.module.scss';
 
-.card {
-    width: 105px;
-    height: 110px;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 8px;
-    background-color: $white;
-  }
-  
-  .order {
-    margin: 4px 5px;
-    padding: 0;
-    text-align: end;
-    font-size: 0.5rem;
-    background-color: $white;
-  }
-  
-  .imagePokemon {
-    top: calc(50% - 59px);
-    margin: 0 auto;
-    position: relative;
-    padding: 0;
-    width: 80px;
-    background-color: $white;
-  }
-  
-  .namePokemon {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    position: relative;
-    top: calc(50% - 79px);
-    font-size: 0.625rem;
-    background-color: $white;
-  }
-  
+.order {
+  margin: 4px 5px;
+  padding: 0;
+  text-align: end;
+  font-size: 0.5rem;
+  background-color: $white;
+}
+
+.imagePokemon {
+  top: calc(50% - 59px);
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  width: 80px;
+  background-color: $white;
+}
+
+.namePokemon {
+  margin: 0;
+  padding: 6px;
+  font-size: 16px;
+  position: relative;
+  top: calc(50% - 79px);
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: $white;
+  border-radius: 0 0 8px 8px;
+}
+.grass {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $grass;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.grass .order {
+  color: $grass;
+}
+
+.grass .namePokemon {
+  background-color: $grass;
+}
+
+.fire {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fire;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fire .order {
+  color: $fire;
+}
+
+.fire .namePokemon {
+  background-color: $fire;
+}
+
+.water {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $water;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.water .order {
+  color: $water;
+}
+
+.water .namePokemon {
+  background-color: $water;
+}
+
+.bug {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $bug;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.bug .order {
+  color: $bug;
+}
+
+.bug .namePokemon {
+  background-color: $bug;
+}
+
+.normal {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $normal;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.normal .order {
+  color: $normal;
+}
+
+.normal .namePokemon {
+  background-color: $normal;
+}
+
+.poison {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $poison;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.poison .order {
+  color: $poison;
+}
+
+.poison .namePokemon {
+  background-color: $poison;
+}
+
+.rock {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $rock;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.rock .order {
+  color: $rock;
+}
+
+.rock .namePokemon {
+  background-color: $rock;
+}
+
+.ghost {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ghost;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ghost .order {
+  color: $ghost;
+}
+
+.ghost .namePokemon {
+  background-color: $ghost;
+}
+
+.steel {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $steel;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.steel .order {
+  color: $steel;
+}
+
+.steel .namePokemon {
+  background-color: $steel;
+}
+
+.fighting {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fighting;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fighting .order {
+  color: $fighting;
+}
+
+.fighting .namePokemon {
+  background-color: $fighting;
+}
+
+.flying {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $flying;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.flying .order {
+  color: $flying;
+}
+
+.flying .namePokemon {
+  background-color: $flying;
+}
+
+.ground {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ground;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ground .order {
+  color: $ground;
+}
+
+.ground .namePokemon {
+  background-color: $ground;
+}
+
+.psychic {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $psychic;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.psychic .order {
+  color: $psychic;
+}
+
+.psychic .namePokemon {
+  background-color: $psychic;
+}
+
+.ice {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ice;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ice .order {
+  color: $ice;
+}
+
+.ice .namePokemon {
+  background-color: $ice;
+}
+
+.dark {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $dark;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.dark .order {
+  color: $dark;
+}
+
+.dark .namePokemon {
+  background-color: $dark;
+}
+
+.fairy {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fairy;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fairy .order {
+  color: $fairy;
+}
+
+.fairy .namePokemon {
+  background-color: $fairy;
+}
+
+.electric {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $electric;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.electric .order {
+  color: $electric;
+}
+
+.electric .namePokemon {
+  background-color: $electric;
+}
+
+.dragon {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $dragon;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.dragon .order {
+  color: $dragon;
+}
+
+.dragon .namePokemon {
+  background-color: $dragon;
+}
