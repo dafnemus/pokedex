@@ -35,7 +35,6 @@ function App() {
     } else {
       setStateFilter(false)
     }
-    console.log('hola', stateFilter)
   }
   return (
     <div className={styles.mainContain}>
