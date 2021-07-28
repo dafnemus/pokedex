@@ -9,6 +9,7 @@ import BigCardPokemon from './bigCard';
 
 function App() {
   const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
+  const [stateFilter, setStateFilter] = useState(false)
 
   const getPokemon = async (pokemon) => {
     const res = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -16,7 +17,7 @@ function App() {
   };
 
   useEffect(async () => {
-    const res = await axios('https://pokeapi.co/api/v2/pokemon?limit=150');
+    const res = await axios('https://pokeapi.co/api/v2/pokemon?limit=100');
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
@@ -27,6 +28,15 @@ function App() {
   const closeModal = () => {
     setPokemon({ ...pokemon, isOpen: false });
   };
+
+  const sortAlphabet = () => {
+    if(stateFilter === false) {
+      setStateFilter(true)
+    } else {
+      setStateFilter(false)
+    }
+    console.log('hola', stateFilter)
+  }
   return (
     <div className={styles.mainContain}>
       <div className={styles.containHeader}>
@@ -34,13 +44,13 @@ function App() {
           <img src={logoPoke} alt='Logo Pokemon' />
           <h1 className={styles.title}>Pokédex</h1>
         </div>
-        <Filter />
+        <Filter value={stateFilter} onClick={sortAlphabet} />
       </div>
       <SearchBar />
       {pokemon.isOpen ? (
         <BigCardPokemon onClick={closeModal} />
       ) : (
-        <ContainMainCards onClick={openModal} pokemons={pokemon.info} />
+        <ContainMainCards onClick={openModal} value={stateFilter} pokemons={pokemon.info} />
       )}
     </div>
   );
