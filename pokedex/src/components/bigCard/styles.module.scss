@@ -1,3 +1,53 @@
 .containBigCard {
   background-color: black;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.containHeader {
+  position: absolute;
+  top: 2%;
+  background: transparent;
+  width: 100%;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0 246px 22px 0px;
+  align-self: center;
+  align-items: center;
+  left: 5%;
+  gap: 5px;
+  color: white;
+}
+
+.containHeader p,
+.containHeader img,
+.containHeader h2 {
+  color: white;
+  background-color: transparent;
+}
+
+.pokeball {
+  background: transparent;
+  position: relative;
+  left: 65px;
+  top: 8px;
+}
+
+.pokemonImage {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: calc(50% - 290px);
+}
+
+.containInfo {
+  width: 350px;
+}
+
