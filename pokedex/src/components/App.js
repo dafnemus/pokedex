@@ -10,10 +10,8 @@ import BigCardPokemon from './bigCard';
 function App() {
   const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
   const [stateFilter, setStateFilter] = useState(false);
-  const [tablePoke, setTablePoke] = useState({ info: [] })
-  const [form, setForm] = useState({
-    namePokemon: '',
-  });
+  const [tablePoke, setTablePoke] = useState({ info: [] });
+  const [form, setForm] = useState({ namePokemon: '' });
 
   const handleChange = (e) => {
     setForm((lastForm) => ({ ...lastForm, namePokemon: e.target.value }));
@@ -25,6 +23,7 @@ function App() {
     setPokemon((last) => ({ ...last, info: [...last.info, res.data] }));
     setTablePoke((last) => ({ ...last, info: [...last.info, res.data] }));
   };
+
   const search = (busquedaPokemon) => {
     const result = tablePoke.info.filter((element) => {
       if (element.name.includes(busquedaPokemon)) {
@@ -39,20 +38,12 @@ function App() {
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
-  const openModal = () => {
-    setPokemon({ ...pokemon, isOpen: true });
-  };
+  const openModal = () => setPokemon({ ...pokemon, isOpen: true });
 
-  const closeModal = () => {
-    setPokemon({ ...pokemon, isOpen: false });
-  };
+  const closeModal = () => setPokemon({ ...pokemon, isOpen: false });
 
   const sortAlphabet = () => {
-    if (stateFilter === false) {
-      setStateFilter(true);
-    } else {
-      setStateFilter(false);
-    }
+    stateFilter ? setStateFilter(false) : setStateFilter(true);
   };
 
   return (

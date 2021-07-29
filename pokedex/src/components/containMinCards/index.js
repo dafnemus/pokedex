@@ -4,28 +4,26 @@ import styles from './styles.module.scss';
 import Pokemon from '../cuadrilla/index';
 
 function ContainMainCards({ onClick, pokemons, value }) {
-  if (value) {
-    pokemons.sort(function (a, b) {
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    });
-  }
-  if (value === false) {
-    pokemons.sort(function (a, b) {
-      if (a.order < b.order) {
-        return -1;
-      }
-      if (a.order > b.order) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  value
+    ? pokemons.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      })
+    : pokemons.sort((a, b) => {
+        if (a.order < b.order) {
+          return -1;
+        }
+        if (a.order > b.order) {
+          return 1;
+        }
+        return 0;
+      });
+
   return (
     <div className={styles.containCards}>
       {pokemons.map((poke) => {
