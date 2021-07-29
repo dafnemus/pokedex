@@ -9,11 +9,29 @@ import BigCardPokemon from './bigCard';
 
 function App() {
   const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
-  const [stateFilter, setStateFilter] = useState(false)
+  const [stateFilter, setStateFilter] = useState(false);
+  const [tablePoke, setTablePoke] = useState({ info: [] })
+  const [form, setForm] = useState({
+    namePokemon: '',
+  });
+
+  const handleChange = (e) => {
+    setForm((lastForm) => ({ ...lastForm, namePokemon: e.target.value }));
+    search(e.target.value);
+  };
 
   const getPokemon = async (pokemon) => {
     const res = await axios(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
     setPokemon((last) => ({ ...last, info: [...last.info, res.data] }));
+    setTablePoke((last) => ({ ...last, info: [...last.info, res.data] }));
+  };
+  const search = (busquedaPokemon) => {
+    const result = tablePoke.info.filter((element) => {
+      if (element.name.includes(busquedaPokemon)) {
+        return element;
+      }
+    });
+    setPokemon({ info: result });
   };
 
   useEffect(async () => {
@@ -30,12 +48,13 @@ function App() {
   };
 
   const sortAlphabet = () => {
-    if(stateFilter === false) {
-      setStateFilter(true)
+    if (stateFilter === false) {
+      setStateFilter(true);
     } else {
-      setStateFilter(false)
+      setStateFilter(false);
     }
-  }
+  };
+
   return (
     <div className={styles.mainContain}>
       <div className={styles.containHeader}>
@@ -45,11 +64,15 @@ function App() {
         </div>
         <Filter value={stateFilter} onClick={sortAlphabet} />
       </div>
-      <SearchBar />
+      <SearchBar value={form.namePokemon} onChange={handleChange} />
       {pokemon.isOpen ? (
         <BigCardPokemon onClick={closeModal} />
       ) : (
-        <ContainMainCards onClick={openModal} value={stateFilter} pokemons={pokemon.info} />
+        <ContainMainCards
+          onClick={openModal}
+          value={stateFilter}
+          pokemons={pokemon.info}
+        />
       )}
     </div>
   );

@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import iconSearch from '../../assets/icon-search.svg';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
-function SearchBar() {
-  const [form, setForm] = useState({
-    namePokemon: '',
-  });
-
-  const handleChange = ({ target: { name, value } }) => {
-    setForm((lastForm) => ({ ...lastForm, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+function SearchBar({ value, onChange }) {
   return (
-    <form className={styles.containForm} onSubmit={handleSubmit}>
-      <img className={styles.logoSearch} src={iconSearch} alt='lupa buscadora' />
+    <div className={styles.containForm}>
+      <img
+        className={styles.logoSearch}
+        src={iconSearch}
+        alt='lupa buscadora'
+      />
       <input
         className={styles.search}
-        name='namePokemon'
-        onChange={handleChange}
+        onChange={onChange}
         placeholder='Procurar'
-        value={form.namePokemon}
+        value={value}
       />
-    </form>
+    </div>
   );
 }
+
+SearchBar.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+};
+
+SearchBar.defaultProps = {
+  value: '',
+  onChange: null,
+};
 
 export default SearchBar;
