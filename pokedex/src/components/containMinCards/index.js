@@ -29,8 +29,8 @@ function ContainMainCards({ onClick, pokemons, value }) {
       {pokemons.map((poke) => {
         return (
           <Pokemon
-            type={poke.types}
             key={poke.order}
+            type={poke.types}
             order={poke.order}
             name={poke.name}
             src={poke.sprites.front_default}
