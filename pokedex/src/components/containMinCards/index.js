@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 import Pokemon from '../cuadrilla/index';
 
-function ContainMainCards({ onClick, pokemons, value }) {
+function ContainMainCards({ pokemons, value }) {
   value
     ? pokemons.sort((a, b) => {
         if (a.name < b.name) {
@@ -27,16 +27,7 @@ function ContainMainCards({ onClick, pokemons, value }) {
   return (
     <div className={styles.containCards}>
       {pokemons.map((poke) => {
-        return (
-          <Pokemon
-            key={poke.order}
-            type={poke.types}
-            order={poke.order}
-            name={poke.name}
-            src={poke.sprites.front_default}
-            onClick={onClick}
-          />
-        );
+        return <Pokemon key={poke.order} poke={poke} />;
       })}
     </div>
   );

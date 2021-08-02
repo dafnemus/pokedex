@@ -5,7 +5,6 @@ import Filter from './filter/index';
 import SearchBar from './searchBar/index';
 import ContainMainCards from './containMinCards';
 import styles from './styles.module.scss';
-import BigCardPokemon from './bigCard';
 
 function App() {
   const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
@@ -38,10 +37,6 @@ function App() {
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
-  const openModal = () => setPokemon({ ...pokemon, isOpen: true });
-
-  const closeModal = () => setPokemon({ ...pokemon, isOpen: false });
-
   const sortAlphabet = () => {
     stateFilter ? setStateFilter(false) : setStateFilter(true);
   };
@@ -56,15 +51,7 @@ function App() {
         <Filter value={stateFilter} onClick={sortAlphabet} />
       </div>
       <SearchBar value={form.namePokemon} onChange={handleChange} />
-      {pokemon.isOpen ? (
-        <BigCardPokemon onClick={closeModal} />
-      ) : (
-        <ContainMainCards
-          onClick={openModal}
-          value={stateFilter}
-          pokemons={pokemon.info}
-        />
-      )}
+      <ContainMainCards value={stateFilter} pokemons={pokemon.info} />
     </div>
   );
 }
