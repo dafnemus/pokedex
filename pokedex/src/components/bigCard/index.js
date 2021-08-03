@@ -6,66 +6,62 @@ import imageBackPoke from '../../assets/pokeball-transparent.svg';
 import iconArrowLeft from '../../assets/arrow-left.svg';
 import styles from './styles.module.scss';
 
-function BigCardPokemon({
-  onClick,
-  name,
-  order,
-  src,
-  weigth,
-  height,
-  moves,
-  hp,
-  atk,
-  def,
-  stack,
-  sdef,
-  spd,
-}) {
+function BigCardPokemon({ onClick, poke }) {
+  console.log(poke.sprites.other);
   return (
     <div className={styles.containBigCard} onClick={onClick}>
       <div className={styles.containHeader}>
         <img src={iconArrowLeft} alt='arrow left' />
-        <h2>{name} pokemon</h2>
-        <p>#{order}</p>
+        <h2>{poke.name}</h2>
+        <p>#{poke.order}</p>
       </div>
       <img
         className={styles.pokeball}
         src={imageBackPoke}
         alt='pokeball transparent'
       />
-      <img className={styles.pokemonImage} src={src} alt={name} />
+      <img
+        className={styles.pokemonImage}
+        src={poke.sprites.other.dream_world.front_default}
+        alt={poke.name}
+      />
       <div className={styles.containInfo}>
-          <p>About</p>
+        {poke.types.map((type) => {
+          return <p key={type.type.name}>{type.type.name}</p>;
+        })}
+        <p>About</p>
         <div>
           <div>
             <img src={iconWeight} alt='weight scale' />
-            <p>{weigth}</p>
+            <p>{poke.weigth}</p>
             <p>Wheight</p>
           </div>
           <div>
             <img src={iconRuler} alt='ruler' />
-            <p>{height}</p>
+            <p>{poke.height}</p>
             <p>Height</p>
           </div>
           <div>
-            <p>{moves}</p>
+            {poke.abilities.map((ability) => {
+              return <p key={ability.name}>{ability.name}</p>;
+            })}
             <p>Moves</p>
           </div>
         </div>
         <h2>Base Stats</h2>
         <div>
           <p>HP</p>
-          <p>{hp}</p>
+          <p>{poke.stats[0].base_stat}</p>
           <p>ATK</p>
-          <p>{atk}</p>
+          <p>{poke.stats[1].base_stat}</p>
           <p>DEF</p>
-          <p>{def}</p>
+          <p>{poke.stats[2].base_stat}</p>
           <p>STAK</p>
-          <p>{stack}</p>
+          <p>{poke.stats[3].base_stat}</p>
           <p>SDEF</p>
-          <p>{sdef}</p>
+          <p>{poke.stats[4].base_stat}</p>
           <p>SPD</p>
-          <p>{spd}</p>
+          <p>{poke.stats[5].base_state}</p>
         </div>
       </div>
     </div>
@@ -74,34 +70,12 @@ function BigCardPokemon({
 
 BigCardPokemon.propTypes = {
   onClick: PropTypes.func,
-  name: PropTypes.string,
-  order: PropTypes.number,
-  src: PropTypes.string,
-  weigth: PropTypes.number,
-  height: PropTypes.number,
-  moves: PropTypes.string,
-  hp: PropTypes.number,
-  atk: PropTypes.number,
-  def: PropTypes.number,
-  stack: PropTypes.number,
-  sdef: PropTypes.number,
-  spd: PropTypes.number,
+  poke: PropTypes.array,
 };
 
 BigCardPokemon.defaultProps = {
   onClick: null,
-  name: '',
-  order: 0,
-  src: '',
-  weigth: 0,
-  height: 0,
-  moves: '',
-  hp: 0,
-  atk: 0,
-  def: 0,
-  stack: 0,
-  sdef: 0,
-  spd: 0,
+  poke: [],
 };
 
 export default BigCardPokemon;

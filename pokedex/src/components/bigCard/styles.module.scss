@@ -42,11 +42,11 @@
 }
 
 .pokemonImage {
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  width: 250px;
+  height: 250px;
   position: absolute;
   top: calc(50% - 290px);
+  background: transparent;
 }
 
 .containInfo {
