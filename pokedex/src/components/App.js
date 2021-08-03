@@ -7,14 +7,14 @@ import ContainMainCards from './containMinCards';
 import styles from './styles.module.scss';
 
 function App() {
-  const [pokemon, setPokemon] = useState({ info: [], isOpen: false });
+  const [pokemon, setPokemon] = useState({ info: [] });
   const [stateFilter, setStateFilter] = useState(false);
   const [tablePoke, setTablePoke] = useState({ info: [] });
   const [form, setForm] = useState({ namePokemon: '' });
 
   const handleChange = (e) => {
     setForm((lastForm) => ({ ...lastForm, namePokemon: e.target.value }));
-    search(e.target.value);
+    searchPokemon(e.target.value);
   };
 
   const getPokemon = async (pokemon) => {
@@ -23,9 +23,9 @@ function App() {
     setTablePoke((last) => ({ ...last, info: [...last.info, res.data] }));
   };
 
-  const search = (busquedaPokemon) => {
+  const searchPokemon = (namePokemon) => {
     const result = tablePoke.info.filter((element) => {
-      if (element.name.includes(busquedaPokemon)) {
+      if (element.name.includes(namePokemon)) {
         return element;
       }
     });
