@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 function BigCard({ onClick, poke }) {
   return (
-    <div className={styles.containerBigCard} onClick={onClick}>
+    <div className={styles[poke.types[0].type.name]} onClick={onClick}>
       <div className={styles.containerHeader}>
         <img src={iconArrowLeft} alt='arrow left' />
         <h2>{poke.name}</h2>
@@ -26,9 +26,7 @@ function BigCard({ onClick, poke }) {
       />
       <div className={styles.containerInfo}>
         <div className={styles.containerTypes}>
-          {poke.types.map((type) => {
-            return <p key={type.type.name}>{type.type.name}</p>;
-          })}
+        <p className={styles.type}>{poke.types[0].type.name}</p>
         </div>
         <p className={styles.titleAbout}>About</p>
         <div className={styles.containerAbout}>
@@ -57,24 +55,24 @@ function BigCard({ onClick, poke }) {
         </div>
         <h2 className={styles.titleBase}>Base Stats</h2>
         <div className={styles.containerStats}>
-          <p>HP</p>
+          <p className={styles.stat}>HP</p>
           <p>{poke.stats[0].base_stat}</p>
-          <span className={styles.progressBar}></span>
-          <p>ATK</p>
+          <span className={styles.progressBar} style={{width: poke.stats[0].base_stat}}></span>
+          <p className={styles.stat}>ATK</p>
           <p>{poke.stats[1].base_stat}</p>
-          <span className={styles.progressBar}></span>
-          <p>DEF</p>
+          <span className={styles.progressBar} style={{width: poke.stats[1].base_stat}}></span>
+          <p className={styles.stat}>DEF</p>
           <p>{poke.stats[2].base_stat}</p>
-          <span className={styles.progressBar}></span>
-          <p>STAK</p>
+          <span className={styles.progressBar} style={{width: poke.stats[2].base_stat}}></span>
+          <p className={styles.stat}>STAK</p>
           <p>{poke.stats[3].base_stat}</p>
-          <span className={styles.progressBar}></span>
-          <p>SDEF</p>
+          <span className={styles.progressBar} style={{width: poke.stats[3].base_stat}}></span>
+          <p className={styles.stat}>SDEF</p>
           <p>{poke.stats[4].base_stat}</p>
-          <span className={styles.progressBar}></span>
-          <p>SPD</p>
+          <span className={styles.progressBar} style={{width: poke.stats[4].base_stat}}></span>
+          <p className={styles.stat}>SPD</p>
           <p>{poke.stats[5].base_stat}</p>
-          <span className={styles.progressBar}></span>
+          <span className={styles.progressBar} style={{width: poke.stats[5].base_stat}}></span>
         </div>
       </div>
     </div>

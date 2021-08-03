@@ -1,16 +1,7 @@
-.containerAbout {
-  position: relative;
-  top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 25px;
-  font-size: 0.625rem;
-}
-
-.containerBigCard {
-  background-color: black;
-  position: absolute;
+@import '../../static/colors/colors.module.scss';
+.bug {
+  background-color: $bug;
+  position: fixed;
   top: 0;
   z-index: 2;
   left: 0;
@@ -20,6 +11,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.bug .type {
+  background-color: $bug;
+}
+
+.bug .progressBar {
+  background-color: $bug;
+}
+
+.bug .titleAbout,
+.bug .titleBase,
+.bug .stat {
+  color: $bug;
+  font-weight: 700;
+}
+
+.containerAbout {
+  position: relative;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 25px;
+  font-size: 0.625rem;
 }
 
 .containerHeader {
@@ -32,13 +48,13 @@
   grid-template-columns: 0 246px 35px 0px;
   align-items: center;
   left: 5%;
-  color: white;
+  color: $white;
 }
 
 .containerHeader p,
 .containerHeader img,
 .containerHeader h2 {
-  color: white;
+  color: $white;
   background: transparent;
 }
 
@@ -57,9 +73,12 @@
 
 .containerStats {
   position: relative;
-  top: 100px;
+  top: 115px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr 3fr;
+  font-size: 0.725rem;
+  align-items: center;
+  margin: 0 20px;
 }
 
 .containerTypes {
@@ -71,10 +90,334 @@
   font-weight: 700;
 }
 
+.dark {
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark .progressBar {
+  background-color: $dark;
+}
+
+.dark .titleAbout,
+.dark .titleBase,
+.dark .stat {
+  color: $dark;
+  font-weight: 700;
+}
+
 .dividerAbout {
-  width: 1px;
   height: 45px;
-  background: black;
+  background: $light-gray;
+}
+
+.dragon {
+  background-color: $dragon;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dragon .progressBar {
+  background-color: $dragon;
+}
+
+.dragon .titleAbout,
+.dragon .titleBase,
+.dragon .stat {
+  color: $dragon;
+  font-weight: 700;
+}
+
+.electric {
+  background-color: $electric;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.electric .progressBar {
+  background-color: $electric;
+}
+
+.electric .titleAbout,
+.electric .titleBase,
+.electric .stat {
+  color: $electric;
+  font-weight: 700;
+}
+
+.fairy {
+  background-color: $fairy;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fairy .progressBar {
+  background-color: $fairy;
+}
+
+.fairy .titleAbout,
+.fairy .titleBase,
+.fairy .stat {
+  color: $fairy;
+  font-weight: 700;
+}
+
+.fighting {
+  background-color: $fighting;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fighting .progressBar {
+  background-color: $fighting;
+}
+
+.fighting .titleAbout,
+.fighting .titleBase,
+.fighting .stat {
+  color: $fighting;
+  font-weight: 700;
+}
+
+.fire {
+  background-color: $fire;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fire .progressBar {
+  background-color: $fire;
+}
+
+.fire .titleAbout,
+.fire .titleBase,
+.fire .stat {
+  color: $fire;
+  font-weight: 700;
+}
+
+.flying {
+  background-color: $flying;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flying .progressBar {
+  background-color: $flying;
+}
+
+.flying .titleAbout,
+.flying .titleBase,
+.flying .stat {
+  color: $flying;
+  font-weight: 700;
+}
+
+.ghost {
+  background-color: $ghost;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ghost .progressBar {
+  background-color: $ghost;
+}
+
+.ghost .titleAbout,
+.ghost .titleBase,
+.ghost .stat {
+  color: $ghost;
+  font-weight: 700;
+}
+
+.grass {
+  background-color: $grass;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grass .progressBar {
+  background-color: $grass;
+}
+
+.grass .titleAbout,
+.grass .titleBase,
+.grass .stat {
+  color: $grass;
+  font-weight: 700;
+}
+
+.ground {
+  background-color: $ground;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ground .progressBar {
+  background-color: $ground;
+}
+
+.ground .titleAbout,
+.ground .titleBase,
+.ground .stat {
+  color: $ground;
+  font-weight: 700;
+}
+
+.ice {
+  background-color: $ice;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ice .progressBar {
+  background-color: $ice;
+}
+
+.ice .titleAbout,
+.ice .titleBase,
+.ice .stat {
+  color: $ice;
+  font-weight: 700;
+}
+
+.normal {
+  background-color: $normal;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.normal .progressBar {
+  background-color: $normal;
+}
+
+.normal .titleAbout,
+.normal .titleBase,
+.normal .stat {
+  color: $normal;
+  font-weight: 700;
+}
+
+.poison {
+  background-color: $poison;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poison .progressBar {
+  background-color: $poison;
+}
+
+.poison .titleAbout,
+.poison .titleBase,
+.poison .stat {
+  color: $poison;
+  font-weight: 700;
 }
 
 .pokeball {
@@ -93,12 +436,88 @@
 }
 
 .progressBar {
-  width: 230px;
-  height: 4px;
+  height: 5px;
+  margin-bottom: 3px;
+}
+
+.psychic {
+  background-color: $psychic;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.psychic .progressBar {
+  background-color: $psychic;
+}
+
+.psychic .titleAbout,
+.psychic .titleBase,
+.psychic .stat {
+  color: $psychic;
+  font-weight: 700;
+}
+
+.rock {
+  background-color: $rock;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rock .progressBar {
+  background-color: $rock;
+}
+
+.rock .titleAbout,
+.rock .titleBase,
+.rock .stat {
+  color: $rock;
+  font-weight: 700;
 }
 
 .subTitleAbout {
   font-size: 0.5rem;
+  color: $medium-gray;
+}
+
+.steel {
+  background-color: $steel;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.steel .progressBar {
+  background-color: $steel;
+}
+
+.steel .titleAbout,
+.steel .titleBase,
+.steel .stat {
+  color: $steel;
+  font-weight: 700;
 }
 
 .titleAbout {
@@ -109,4 +528,35 @@
 .titleBase {
   position: relative;
   top: 100px;
+}
+
+.type {
+  color: $white;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.water {
+  background-color: $water;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100vw;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.water .progressBar {
+  background-color: $water;
+}
+
+.water .titleAbout,
+.water .titleBase,
+.water .stat {
+  color: $water;
+  font-weight: 700;
 }
