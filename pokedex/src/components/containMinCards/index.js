@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
-import Pokemon from '../cuadrilla/index';
+import Pokemon from '../pokemon/index';
 
 function ContainMainCards({ pokemons, value }) {
   value
@@ -26,8 +26,8 @@ function ContainMainCards({ pokemons, value }) {
 
   return (
     <div className={styles.containCards}>
-      {pokemons.map((poke) => {
-        return <Pokemon key={poke.order} poke={poke} />;
+      {pokemons.map((pokemon) => {
+        return <Pokemon key={pokemon.order} poke={pokemon} />;
       })}
     </div>
   );
