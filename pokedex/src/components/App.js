@@ -37,9 +37,7 @@ function App() {
     res.data.results.forEach((idPokemon) => getPokemon(idPokemon.name));
   }, []);
 
-  const sortAlphabet = () => {
-    stateFilter ? setStateFilter(false) : setStateFilter(true);
-  };
+  const sortAlphabet = () => setStateFilter(!stateFilter);
 
   return (
     <div className={styles.mainContainer}>
