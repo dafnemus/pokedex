@@ -1,3 +1,13 @@
+.containerAbout {
+  position: relative;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 25px;
+  font-size: 0.625rem;
+}
+
 .containerBigCard {
   background-color: black;
   position: absolute;
@@ -5,8 +15,8 @@
   z-index: 2;
   left: 0;
   width: 100vw;
+  height: 640px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -14,16 +24,14 @@
 
 .containerHeader {
   position: absolute;
-  top: 2%;
+  top: 24px;
   background: transparent;
   width: 100%;
   justify-content: space-between;
   display: grid;
-  grid-template-columns: 0 246px 22px 0px;
-  align-self: center;
+  grid-template-columns: 0 246px 35px 0px;
   align-items: center;
   left: 5%;
-  gap: 5px;
   color: white;
 }
 
@@ -34,8 +42,39 @@
   background: transparent;
 }
 
+.containerIcon {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
 .containerInfo {
   width: 350px;
+  text-align: center;
+  height: 452px;
+  margin: 10px;
+}
+
+.containerStats {
+  position: relative;
+  top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.containerTypes {
+  display: flex;
+  position: relative;
+  top: 55px;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.dividerAbout {
+  width: 1px;
+  height: 45px;
+  background: black;
 }
 
 .pokeball {
@@ -46,9 +85,28 @@
 }
 
 .pokemonImage {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  top: calc(50% - 290px);
+  top: calc(50% - 260px);
   background: transparent;
+}
+
+.progressBar {
+  width: 230px;
+  height: 4px;
+}
+
+.subTitleAbout {
+  font-size: 0.5rem;
+}
+
+.titleAbout {
+  position: relative;
+  top: 70px;
+}
+
+.titleBase {
+  position: relative;
+  top: 100px;
 }

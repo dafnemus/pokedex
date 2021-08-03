@@ -7,7 +7,6 @@ import iconArrowLeft from '../../assets/arrow-left.svg';
 import styles from './styles.module.scss';
 
 function BigCard({ onClick, poke }) {
-  console.log(poke.sprites.other);
   return (
     <div className={styles.containerBigCard} onClick={onClick}>
       <div className={styles.containerHeader}>
@@ -26,42 +25,56 @@ function BigCard({ onClick, poke }) {
         alt={poke.name}
       />
       <div className={styles.containerInfo}>
-        {poke.types.map((type) => {
-          return <p key={type.type.name}>{type.type.name}</p>;
-        })}
-        <p>About</p>
-        <div>
+        <div className={styles.containerTypes}>
+          {poke.types.map((type) => {
+            return <p key={type.type.name}>{type.type.name}</p>;
+          })}
+        </div>
+        <p className={styles.titleAbout}>About</p>
+        <div className={styles.containerAbout}>
           <div>
-            <img src={iconWeight} alt='weight scale' />
-            <p>{poke.weigth}</p>
-            <p>Wheight</p>
+            <p className={styles.containerIcon}>
+              <img src={iconWeight} alt='weight scale' />
+              {poke.weight} kg
+            </p>
+            <p className={styles.subTitleAbout}>Wheight</p>
           </div>
+          <hr className={styles.dividerAbout} />
           <div>
-            <img src={iconRuler} alt='ruler icon' />
-            <p>{poke.height}</p>
-            <p>Height</p>
+            <p className={styles.containerIcon}>
+              <img src={iconRuler} alt='ruler icon' />
+              {poke.height} m
+            </p>
+            <p className={styles.subTitleAbout}>Height</p>
           </div>
+          <hr className={styles.dividerAbout} />
           <div>
             {poke.abilities.map((ability) => {
-              return <p key={ability.name}>{ability.name}</p>;
+              return <p key={ability.ability.name}>{ability.ability.name}</p>;
             })}
-            <p>Moves</p>
+            <p className={styles.subTitleAbout}>Moves</p>
           </div>
         </div>
-        <h2>Base Stats</h2>
-        <div>
+        <h2 className={styles.titleBase}>Base Stats</h2>
+        <div className={styles.containerStats}>
           <p>HP</p>
           <p>{poke.stats[0].base_stat}</p>
+          <span className={styles.progressBar}></span>
           <p>ATK</p>
           <p>{poke.stats[1].base_stat}</p>
+          <span className={styles.progressBar}></span>
           <p>DEF</p>
           <p>{poke.stats[2].base_stat}</p>
+          <span className={styles.progressBar}></span>
           <p>STAK</p>
           <p>{poke.stats[3].base_stat}</p>
+          <span className={styles.progressBar}></span>
           <p>SDEF</p>
           <p>{poke.stats[4].base_stat}</p>
+          <span className={styles.progressBar}></span>
           <p>SPD</p>
-          <p>{poke.stats[5].base_state}</p>
+          <p>{poke.stats[5].base_stat}</p>
+          <span className={styles.progressBar}></span>
         </div>
       </div>
     </div>
