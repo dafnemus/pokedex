@@ -10,17 +10,16 @@ function Pokemon({ poke }) {
 
   const closeModal = () => setPokemon(false);
 
-  console.log(poke);
   return (
     <div>
       {pokemon ? (
-        <BigCardPokemon onClick={closeModal} name={poke.name} />
+        <BigCardPokemon onClick={closeModal} poke={poke}/>
       ) : (
         <div onClick={openModal} className={styles[poke.types[0].type.name]}>
           <p className={styles.order}>#{poke.order}</p>
           <img
             className={styles.imagePokemon}
-            src={poke.sprites.front_default}
+            src={poke.sprites.other.dream_world.front_default}
             alt='pokemon'
           />
           <h2 className={styles.namePokemon}>{poke.name}</h2>
@@ -35,7 +34,6 @@ Pokemon.propTypes = {
 };
 
 Pokemon.defaultProps = {
-  onClick: null,
   pok: [],
 };
 
