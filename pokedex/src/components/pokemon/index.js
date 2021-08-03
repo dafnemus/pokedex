@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
-import BigCardPokemon from '../bigCard/index';
+import BigCard from '../bigCard/index';
 
 function Pokemon({ poke }) {
   const [pokemon, setPokemon] = useState(false);
@@ -13,7 +13,7 @@ function Pokemon({ poke }) {
   return (
     <div>
       {pokemon ? (
-        <BigCardPokemon onClick={closeModal} poke={poke}/>
+        <BigCard onClick={closeModal} poke={poke}/>
       ) : (
         <div onClick={openModal} className={styles[poke.types[0].type.name]}>
           <p className={styles.order}>#{poke.order}</p>
