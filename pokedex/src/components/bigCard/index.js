@@ -6,7 +6,7 @@ import imageBackPoke from '../../assets/pokeball-transparent.svg';
 import iconArrowLeft from '../../assets/arrow-left.svg';
 import styles from './styles.module.scss';
 
-function BigCardPokemon({ onClick, poke }) {
+function BigCard({ onClick, poke }) {
   console.log(poke.sprites.other);
   return (
     <div className={styles.containBigCard} onClick={onClick}>
@@ -37,7 +37,7 @@ function BigCardPokemon({ onClick, poke }) {
             <p>Wheight</p>
           </div>
           <div>
-            <img src={iconRuler} alt='ruler' />
+            <img src={iconRuler} alt='ruler icon' />
             <p>{poke.height}</p>
             <p>Height</p>
           </div>
@@ -68,14 +68,14 @@ function BigCardPokemon({ onClick, poke }) {
   );
 }
 
-BigCardPokemon.propTypes = {
+BigCard.propTypes = {
   onClick: PropTypes.func,
   poke: PropTypes.array,
 };
 
-BigCardPokemon.defaultProps = {
+BigCard.defaultProps = {
   onClick: null,
   poke: [],
 };
 
-export default BigCardPokemon;
+export default BigCard;
