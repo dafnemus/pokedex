@@ -14,13 +14,13 @@
   background-color: $white;
 }
 
+.logoSearch {
+  justify-self: end;
+}
+
 .search {
   border: none;
   width: 100px;
   font-size: 0.625rem;
   background-color: $white;
-}
-
-.logoSearch {
-  justify-self: end;
 }

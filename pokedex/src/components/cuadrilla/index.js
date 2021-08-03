@@ -22,7 +22,7 @@ function Pokemon({ poke }) {
             src={poke.sprites.other.dream_world.front_default}
             alt='pokemon'
           />
-          <h2 className={styles.namePokemon}>{poke.name}</h2>
+          <h2 className={styles.pokemonName}>{poke.name}</h2>
         </div>
       )}
     </div>

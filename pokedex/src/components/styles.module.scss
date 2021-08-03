@@ -7,19 +7,20 @@
   font-family: $font-poppins;
 }
 
-.mainContain {
-  color: $dark-gray;
-}
-.containLogo {
-  display: flex;
-  gap: 10px;
-}
-
 .containHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px 24px 5px;
+}
+
+.containLogo {
+  display: flex;
+  gap: 10px;
+}
+
+.mainContain {
+  color: $dark-gray;
 }
 
 .title {
