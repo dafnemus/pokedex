@@ -1,4 +1,4 @@
-.containBigCard {
+.containerBigCard {
   background-color: black;
   position: absolute;
   top: 0;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.containHeader {
+.containerHeader {
   position: absolute;
   top: 2%;
   background: transparent;
@@ -27,14 +27,14 @@
   color: white;
 }
 
-.containHeader p,
-.containHeader img,
-.containHeader h2 {
+.containerHeader p,
+.containerHeader img,
+.containerHeader h2 {
   color: white;
   background: transparent;
 }
 
-.containInfo {
+.containerInfo {
   width: 350px;
 }
 

@@ -7,19 +7,19 @@
   font-family: $font-poppins;
 }
 
-.containHeader {
+.containerHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px 24px 5px;
 }
 
-.containLogo {
+.containerLogo {
   display: flex;
   gap: 10px;
 }
 
-.mainContain {
+.mainContainer {
   color: $dark-gray;
 }
 

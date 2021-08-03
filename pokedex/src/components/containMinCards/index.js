@@ -25,7 +25,7 @@ function ContainMainCards({ pokemons, value }) {
       });
 
   return (
-    <div className={styles.containCards}>
+    <div className={styles.containerCards}>
       {pokemons.map((pokemon) => {
         return <Pokemon key={pokemon.order} poke={pokemon} />;
       })}

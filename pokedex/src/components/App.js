@@ -42,9 +42,9 @@ function App() {
   };
 
   return (
-    <div className={styles.mainContain}>
-      <div className={styles.containHeader}>
-        <div className={styles.containLogo}>
+    <div className={styles.mainContainer}>
+      <div className={styles.containerHeader}>
+        <div className={styles.containerLogo}>
           <img src={logoPoke} alt='Logo Pokemon' />
           <h1 className={styles.title}>Pokédex</h1>
         </div>

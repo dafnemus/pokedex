@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 function SearchBar({ value, onChange }) {
   return (
-    <div className={styles.containForm}>
+    <div className={styles.containerForm}>
       <img
         className={styles.logoSearch}
         src={iconSearch}

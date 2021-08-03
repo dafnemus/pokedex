@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 function Filter({ onClick, value }) {
   return (
-    <div onClick={onClick} className={styles.containFilter}>
+    <div onClick={onClick} className={styles.containerFilter}>
       <a className={styles.filter}>{`${value ? 'A-Z' : '#'}`}</a>
       <img src={iconFilter} alt='filtro' />
     </div>

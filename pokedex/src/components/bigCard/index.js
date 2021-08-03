@@ -9,8 +9,8 @@ import styles from './styles.module.scss';
 function BigCard({ onClick, poke }) {
   console.log(poke.sprites.other);
   return (
-    <div className={styles.containBigCard} onClick={onClick}>
-      <div className={styles.containHeader}>
+    <div className={styles.containerBigCard} onClick={onClick}>
+      <div className={styles.containerHeader}>
         <img src={iconArrowLeft} alt='arrow left' />
         <h2>{poke.name}</h2>
         <p>#{poke.order}</p>
@@ -25,7 +25,7 @@ function BigCard({ onClick, poke }) {
         src={poke.sprites.other.dream_world.front_default}
         alt={poke.name}
       />
-      <div className={styles.containInfo}>
+      <div className={styles.containerInfo}>
         {poke.types.map((type) => {
           return <p key={type.type.name}>{type.type.name}</p>;
         })}
