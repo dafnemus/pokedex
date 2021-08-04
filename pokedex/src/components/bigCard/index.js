@@ -8,9 +8,14 @@ import styles from './styles.module.scss';
 
 function BigCard({ onClick, poke }) {
   return (
-    <div className={styles[poke.types[0].type.name]} >
+    <div className={styles[poke.types[0].type.name]}>
       <div className={styles.containerHeader}>
-        <img onClick={onClick}  className={styles.arrow} src={iconArrowLeft} alt='arrow left' />
+        <img
+          onClick={onClick}
+          className={styles.arrow}
+          src={iconArrowLeft}
+          alt='arrow left'
+        />
         <h2>{poke.name}</h2>
         <p>#{poke.order}</p>
       </div>
@@ -26,7 +31,7 @@ function BigCard({ onClick, poke }) {
       />
       <div className={styles.containerInfo}>
         <div className={styles.containerTypes}>
-        <p className={styles.type}>{poke.types[0].type.name}</p>
+          <p className={styles.type}>{poke.types[0].type.name}</p>
         </div>
         <p className={styles.titleAbout}>About</p>
         <div className={styles.containerAbout}>
@@ -57,22 +62,40 @@ function BigCard({ onClick, poke }) {
         <div className={styles.containerStats}>
           <p className={styles.stat}>HP</p>
           <p>{poke.stats[0].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[0].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[0].base_stat }}
+          ></span>
           <p className={styles.stat}>ATK</p>
           <p>{poke.stats[1].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[1].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[1].base_stat }}
+          ></span>
           <p className={styles.stat}>DEF</p>
           <p>{poke.stats[2].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[2].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[2].base_stat }}
+          ></span>
           <p className={styles.stat}>STAK</p>
           <p>{poke.stats[3].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[3].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[3].base_stat }}
+          ></span>
           <p className={styles.stat}>SDEF</p>
           <p>{poke.stats[4].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[4].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[4].base_stat }}
+          ></span>
           <p className={styles.stat}>SPD</p>
           <p>{poke.stats[5].base_stat}</p>
-          <span className={styles.progressBar} style={{width: poke.stats[5].base_stat}}></span>
+          <span
+            className={styles.progressBar}
+            style={{ width: poke.stats[5].base_stat }}
+          ></span>
         </div>
       </div>
     </div>
