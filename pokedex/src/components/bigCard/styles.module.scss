@@ -1,11 +1,12 @@
 @import '../../static/colors/colors.module.scss';
+
 .bug {
   background-color: $bug;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
-  width: 100vw;
+  width: 360px;
   height: 640px;
   display: flex;
   flex-direction: column;
@@ -13,11 +14,7 @@
   align-items: center;
 }
 
-.bug .type {
-  background-color: $bug;
-}
-
-.bug .progressBar {
+.bug .progressBar, .bug .type {
   background-color: $bug;
 }
 
@@ -92,7 +89,7 @@
 
 .dark {
   background-color: $dark;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -104,7 +101,7 @@
   align-items: center;
 }
 
-.dark .progressBar {
+.dark .progressBar, .dark .type {
   background-color: $dark;
 }
 
@@ -122,7 +119,7 @@
 
 .dragon {
   background-color: $dragon;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -134,7 +131,7 @@
   align-items: center;
 }
 
-.dragon .progressBar {
+.dragon .progressBar, .dragon .type {
   background-color: $dragon;
 }
 
@@ -147,7 +144,7 @@
 
 .electric {
   background-color: $electric;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -159,7 +156,7 @@
   align-items: center;
 }
 
-.electric .progressBar {
+.electric .progressBar, .electric .type {
   background-color: $electric;
 }
 
@@ -172,7 +169,7 @@
 
 .fairy {
   background-color: $fairy;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -184,7 +181,7 @@
   align-items: center;
 }
 
-.fairy .progressBar {
+.fairy .progressBar, .fairy .type {
   background-color: $fairy;
 }
 
@@ -197,7 +194,7 @@
 
 .fighting {
   background-color: $fighting;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -209,7 +206,7 @@
   align-items: center;
 }
 
-.fighting .progressBar {
+.fighting .progressBar, .fighting .type {
   background-color: $fighting;
 }
 
@@ -222,7 +219,7 @@
 
 .fire {
   background-color: $fire;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -234,7 +231,7 @@
   align-items: center;
 }
 
-.fire .progressBar {
+.fire .progressBar, .fire .type {
   background-color: $fire;
 }
 
@@ -247,7 +244,7 @@
 
 .flying {
   background-color: $flying;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -259,7 +256,7 @@
   align-items: center;
 }
 
-.flying .progressBar {
+.flying .progressBar, .flying .type {
   background-color: $flying;
 }
 
@@ -272,7 +269,7 @@
 
 .ghost {
   background-color: $ghost;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -284,7 +281,7 @@
   align-items: center;
 }
 
-.ghost .progressBar {
+.ghost .progressBar, .ghost .type {
   background-color: $ghost;
 }
 
@@ -297,7 +294,7 @@
 
 .grass {
   background-color: $grass;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -309,7 +306,7 @@
   align-items: center;
 }
 
-.grass .progressBar {
+.grass .progressBar, .grass .type {
   background-color: $grass;
 }
 
@@ -322,7 +319,7 @@
 
 .ground {
   background-color: $ground;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -334,7 +331,7 @@
   align-items: center;
 }
 
-.ground .progressBar {
+.ground .progressBar, .ground .type {
   background-color: $ground;
 }
 
@@ -347,7 +344,7 @@
 
 .ice {
   background-color: $ice;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -359,7 +356,7 @@
   align-items: center;
 }
 
-.ice .progressBar {
+.ice .progressBar, .ice .type {
   background-color: $ice;
 }
 
@@ -372,7 +369,7 @@
 
 .normal {
   background-color: $normal;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -384,7 +381,7 @@
   align-items: center;
 }
 
-.normal .progressBar {
+.normal .progressBar, .normal .type {
   background-color: $normal;
 }
 
@@ -397,7 +394,7 @@
 
 .poison {
   background-color: $poison;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -409,7 +406,7 @@
   align-items: center;
 }
 
-.poison .progressBar {
+.poison .progressBar, .poison .type {
   background-color: $poison;
 }
 
@@ -442,7 +439,7 @@
 
 .psychic {
   background-color: $psychic;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -454,7 +451,7 @@
   align-items: center;
 }
 
-.psychic .progressBar {
+.psychic .progressBar, .psychic .type {
   background-color: $psychic;
 }
 
@@ -467,7 +464,7 @@
 
 .rock {
   background-color: $rock;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -479,7 +476,7 @@
   align-items: center;
 }
 
-.rock .progressBar {
+.rock .progressBar, .rock .type {
   background-color: $rock;
 }
 
@@ -497,7 +494,7 @@
 
 .steel {
   background-color: $steel;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -509,7 +506,7 @@
   align-items: center;
 }
 
-.steel .progressBar {
+.steel .progressBar, .steel .type {
   background-color: $steel;
 }
 
@@ -538,7 +535,7 @@
 
 .water {
   background-color: $water;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
   left: 0;
@@ -550,7 +547,7 @@
   align-items: center;
 }
 
-.water .progressBar {
+.water .progressBar, .water .type {
   background-color: $water;
 }
 
