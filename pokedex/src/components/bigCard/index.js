@@ -8,9 +8,9 @@ import styles from './styles.module.scss';
 
 function BigCard({ onClick, poke }) {
   return (
-    <div className={styles[poke.types[0].type.name]} onClick={onClick}>
+    <div className={styles[poke.types[0].type.name]} >
       <div className={styles.containerHeader}>
-        <img src={iconArrowLeft} alt='arrow left' />
+        <img onClick={onClick}  className={styles.arrow} src={iconArrowLeft} alt='arrow left' />
         <h2>{poke.name}</h2>
         <p>#{poke.order}</p>
       </div>

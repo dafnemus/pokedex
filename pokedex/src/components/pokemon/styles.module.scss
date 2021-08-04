@@ -170,7 +170,6 @@
   background-color: $grass;
 }
 
-
 .ground {
   width: 105px;
   height: 110px;
@@ -337,4 +336,42 @@
 
 .water .pokemonName {
   background-color: $water;
+}
+
+@media only screen and (min-width: 1000px) {
+  .bug,
+  .dark,
+  .dragon,
+  .electric,
+  .fairy,
+  .fighting,
+  .fire,
+  .flying,
+  .ghost,
+  .grass,
+  .ground,
+  .ice,
+  .normal,
+  .poison,
+  .psychic,
+  .rock,
+  .steel,
+  .water {
+    width: 150px;
+    height: 150px;
+  }
+
+  .order {
+    font-size: 0.8rem;
+  }
+
+  .imagePokemon {
+    top: calc(50% - 73px);
+    width: 90px;
+    height: 90px;
+  }
+
+  .pokemonName {
+    font-size: 0.825rem;
+  }
 }

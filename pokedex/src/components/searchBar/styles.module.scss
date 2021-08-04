@@ -24,3 +24,10 @@
   font-size: 0.625rem;
   background-color: $white;
 }
+
+@media only screen and (min-width: 1000px) {
+  .search {
+    font-size: 0.8rem;
+    width: 150px;
+  }
+}
