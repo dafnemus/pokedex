@@ -1,0 +1,42 @@
+@import '../static/colors/colors.module.scss';
+@import '../static/font/font.module.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: $background-cain-color;
+  font-family: $font-poppins;
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 24px 5px;
+}
+
+.containerLogo {
+  display: flex;
+  gap: 10px;
+}
+
+.mainContainer {
+  color: $dark-gray;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .containerHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}

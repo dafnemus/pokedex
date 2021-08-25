@@ -1,0 +1,377 @@
+@import '../../static/colors/colors.module.scss';
+
+.bug {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $bug;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.bug .order {
+  color: $bug;
+}
+
+.bug .pokemonName {
+  background-color: $bug;
+}
+
+.dark {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $dark;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.dark .order {
+  color: $dark;
+}
+
+.dark .pokemonName {
+  background-color: $dark;
+}
+
+.dragon {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $dragon;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.dragon .order {
+  color: $dragon;
+}
+
+.dragon .pokemonName {
+  background-color: $dragon;
+}
+
+.electric {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $electric;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.electric .order {
+  color: $electric;
+}
+
+.electric .pokemonName {
+  background-color: $electric;
+}
+
+.fairy {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fairy;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fairy .order {
+  color: $fairy;
+}
+
+.fairy .pokemonName {
+  background-color: $fairy;
+}
+
+.fighting {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fighting;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fighting .order {
+  color: $fighting;
+}
+
+.fighting .pokemonName {
+  background-color: $fighting;
+}
+
+.fire {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $fire;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.fire .order {
+  color: $fire;
+}
+
+.fire .pokemonName {
+  background-color: $fire;
+}
+
+.flying {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $flying;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.flying .order {
+  color: $flying;
+}
+
+.flying .pokemonName {
+  background-color: $flying;
+}
+
+.ghost {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ghost;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ghost .order {
+  color: $ghost;
+}
+
+.ghost .pokemonName {
+  background-color: $ghost;
+}
+
+.grass {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $grass;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.grass .order {
+  color: $grass;
+}
+
+.grass .pokemonName {
+  background-color: $grass;
+}
+
+.ground {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ground;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ground .order {
+  color: $ground;
+}
+
+.ground .pokemonName {
+  background-color: $ground;
+}
+
+.ice {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $ice;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.ice .order {
+  color: $ice;
+}
+
+.ice .pokemonName {
+  background-color: $ice;
+}
+
+.imagePokemon {
+  top: calc(50% - 59px);
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  background-color: $white;
+  cursor: pointer;
+}
+
+.normal {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $normal;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.normal .order {
+  color: $normal;
+}
+
+.normal .pokemonName {
+  background-color: $normal;
+}
+
+.order {
+  margin: 4px 5px;
+  padding: 0;
+  text-align: end;
+  font-size: 0.5rem;
+  background-color: $white;
+}
+
+.poison {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $poison;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.poison .order {
+  color: $poison;
+}
+
+.poison .pokemonName {
+  background-color: $poison;
+}
+
+.pokemonName {
+  margin: 0;
+  padding: 6px;
+  font-size: 16px;
+  position: relative;
+  top: calc(50% - 79px);
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: $white;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+}
+
+.psychic {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $psychic;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.psychic .order {
+  color: $psychic;
+}
+
+.psychic .pokemonName {
+  background-color: $psychic;
+}
+
+.rock {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $rock;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.rock .order {
+  color: $rock;
+}
+
+.rock .pokemonName {
+  background-color: $rock;
+}
+
+.steel {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $steel;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.steel .order {
+  color: $steel;
+}
+
+.steel .pokemonName {
+  background-color: $steel;
+}
+
+.water {
+  width: 105px;
+  height: 110px;
+  border: 1px solid $water;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $white;
+}
+
+.water .order {
+  color: $water;
+}
+
+.water .pokemonName {
+  background-color: $water;
+}
+
+@media only screen and (min-width: 1000px) {
+  .bug,
+  .dark,
+  .dragon,
+  .electric,
+  .fairy,
+  .fighting,
+  .fire,
+  .flying,
+  .ghost,
+  .grass,
+  .ground,
+  .ice,
+  .normal,
+  .poison,
+  .psychic,
+  .rock,
+  .steel,
+  .water {
+    width: 150px;
+    height: 150px;
+  }
+
+  .order {
+    font-size: 0.8rem;
+  }
+
+  .imagePokemon {
+    top: calc(50% - 73px);
+    width: 90px;
+    height: 90px;
+  }
+
+  .pokemonName {
+    font-size: 0.825rem;
+  }
+}

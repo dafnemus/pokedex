@@ -1,0 +1,33 @@
+@import '../../static/colors/colors.module.scss';
+
+.containerForm {
+  height: 24px;
+  width: 328px;
+  display: grid;
+  grid-template-columns: 131px 100px;
+  align-items: center;
+  gap: 7px;
+  margin: 0 auto;
+  border: 1px solid $light-gray;
+  border-radius: 8px;
+  color: $medium-gray;
+  background-color: $white;
+}
+
+.logoSearch {
+  justify-self: end;
+}
+
+.search {
+  border: none;
+  width: 100px;
+  font-size: 0.625rem;
+  background-color: $white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .search {
+    font-size: 0.8rem;
+    width: 150px;
+  }
+}
