@@ -16,7 +16,7 @@ function Pokemon({ poke }) {
         <BigCard onClick={closeModal} poke={poke}/>
       ) : (
         <div onClick={openModal} className={styles[poke.types[0].type.name]}>
-          <p className={styles.order}>#{poke.order}</p>
+          <p className={styles.order}>#{poke.id}</p>
           <img
             className={styles.imagePokemon}
             src={poke.sprites.other.dream_world.front_default}
