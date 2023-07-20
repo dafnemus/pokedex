@@ -6,8 +6,8 @@
   top: 0;
   z-index: 2;
   left: 0;
-  width: 360px;
-  height: 640px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +95,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +126,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,7 +152,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,7 +178,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -204,7 +204,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,7 +230,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,7 +256,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,7 +282,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -308,7 +308,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -334,7 +334,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -360,7 +360,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -386,7 +386,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -412,7 +412,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,7 +458,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -484,7 +484,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -515,7 +515,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -559,7 +559,7 @@
   z-index: 2;
   left: 0;
   width: 100vw;
-  height: 640px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -602,11 +602,11 @@
   }
 
   .containerAbout {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .containerHeader {
-    grid-template-columns: 0 975px 84px 0px;
+    grid-template-columns: 0 1000px 84px 0px;
     left: 4%;
     font-size: 1.8rem;
   }
@@ -616,19 +616,23 @@
     cursor: pointer;
   }
 
+  .containerInfo {
+    width: 450px;
+    height: 500px;
+  }
   .containerStats {
-    font-size: 0.925rem;
+    font-size: 1rem;
   }
 
   .pokeball {
-    width: 400px;
+    width: 600px;
   }
 
   .pokemonImage {
-    width: 326px;
-    height: 300px;
-    top: calc(50% - 79px);
-    left: 280px;
+    width: 426px;
+    height: 400px;
+    top: calc(50% - 139px);
+    left: 250px;
   }
 
   .subTitleAbout {
